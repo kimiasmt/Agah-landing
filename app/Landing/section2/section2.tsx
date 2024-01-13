@@ -2,10 +2,10 @@ import Image from "next/image";
 import section2 from "@/public/section2.svg";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {useState} from "react";
-import './form-container.scss'
+import './section2.scss'
 
 
-export default function FormContainer () {
+export default function Section2 () {
     const [formCompleted,setFormCompleted] = useState(false)
     type Inputs ={
         name: string
@@ -20,6 +20,7 @@ export default function FormContainer () {
 
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
         try {
+
             const res = await fetch('https://reqres.in/api/users', {
                 method: 'POST',
                 body: JSON.stringify(data),
@@ -43,20 +44,28 @@ export default function FormContainer () {
                     <Image src={section2} alt={"section2-image"}/>
                 </div>
                 <div className={"section2__form-container"}>
-                    {!formCompleted && <form className={"flex flex-col  gap-3"} onSubmit={handleSubmit(onSubmit)}>
+                    {!formCompleted && <form className={"flex flex-col"} onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor={"name"}  className={"text-lg font-bold"}  >Name</label>
-                        {errors.name && <span>This field is required</span>}
-                        <input id={"name"} className={"section2__input"} defaultValue="test" {...register("name")} />
+                        <div className={"section2__input-container"}>
+                            <input id={"name"} className={"section2__input"} {...register("name",{ required: true })} />
+                            {errors.name && <span>This field is required</span>}
+                        </div>
+
                         <label htmlFor={"phoneNumber"}    className={"text-lg font-bold"} >phoneNumber</label>
-                        <input className={"section2__input"} {...register("phoneNumber", { required: true })} />
-                        {errors.phoneNumber && <span>This field is required</span>}
+                        <div className={"section2__input-container"}>
+                            <input className={"section2__input"} {...register("phoneNumber", { required: true ,pattern: {
+                                    value: /^09\d{9}$/,
+                                    message: 'not correct',
+                                }})} />
+                            {errors.phoneNumber && <span>This field is required</span>}
+                        </div>
                         <input
-                            className="bg-black rounded-full text-white max-w-md p-3.5 w-full text lg:text-neutral-800 lg:text-2xl font-bold font-['Segoe UI']"
+                            className="section2__submit "
                             type={"submit"}/>
 
                     </form>}
-                    {formCompleted && <div className={"font-bold text-lg rounded-full bg-white "}>
-                        Thanks for Joining us
+                    {formCompleted && <div className={"font-bold p-32 text-3xl rounded-xl bg-white text-center "}>
+                            Thanks for Joining us
                     </div>}
                 </div>
                 <div className={"hidden lg:block lg:w-[44.6rem] lg:mr-[10rem]"}>

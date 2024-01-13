@@ -1,9 +1,8 @@
 'use client';
-import './Landing.scss';
 import { GoogleTagManager } from '@next/third-parties/google'
 import Header from "@/app/Landing/header";
 import Section1 from "@/app/Landing/section1/section1";
-import FormContainer from "@/app/Landing/form-container/form-container";
+import Section2 from "@/app/Landing/section2/section2";
 export default function Landing() {
 
     return (
@@ -11,7 +10,7 @@ export default function Landing() {
             <GoogleTagManager gtmId="GTM-MT64LBBH" />
             <Header/>
             <Section1/>
-            <FormContainer/>
+            <Section2/>
         </div>
     )
 }
