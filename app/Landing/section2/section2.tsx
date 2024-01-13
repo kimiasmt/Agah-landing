@@ -68,8 +68,8 @@ export default function Section2 () {
                             Thanks for Joining us
                     </div>}
                 </div>
-                <div className={"hidden lg:block lg:w-[44.6rem] lg:mr-[10rem]"}>
-                    <Image src={section2} alt={"section1-image"}/>
+                <div className={"hidden lg:block lg:w-[44.6rem] lg:mr-[10rem] lg:mt-[10rem]"}>
+                    <Image src={section2} alt={"section2-image"}/>
                 </div>
         </div>
     )

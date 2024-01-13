@@ -5,7 +5,7 @@
     clip-path : polygon(0 30%, 100% 0%, 100% 70%, 0% 100%);
   }
 
-  @apply h-[58rem] lg:min-h-screen bg-primary  px-[1.25rem] lg:h-auto  lg:flex lg:flex-row justify-end ;
+  @apply h-[58rem] lg:min-h-screen py-[2rem] bg-primary  px-[1.25rem] lg:h-[80rem] lg:py-[10rem] lg:flex lg:flex-row justify-end ;
 
   &__image {
     @apply w-[21.87rem] pt-8 flex flex-row items-center lg:mt-[10rem] lg:hidden;

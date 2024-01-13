@@ -15,20 +15,20 @@ export default function Section1 () {
         "Mauris Fermentum Praesent"
     ]
     return (
-            <div className={" px-[1.25rem]  lg:flex lg:flex-row justify-end "}>
+            <div className={" px-[1.25rem] lg:items-center  lg:flex lg:flex-row justify-end "}>
                 <div className={"w-[21.87rem] lg:hidden"}>
                     <Image src={section1} alt={"section1-image"}/>
                 </div>
                 <div className={"lg:flex lg:flex-col lg:w-1/2 mt-3 lg:mt-[7.19rem] lg:ml-[15.5rem]"}>
                     <h5 className="text-primary text-[1rem] lg:text-3xl font-bold font-['Segoe UI'] uppercase">risus praesent vulputate </h5>
-                    <h1 className=" lg:w-[54rem] text-[2rem] lg:text-[80px] whitespace-nowrap font-bold font-['Segoe UI'] lg:leading-[90px] mb-[2rem] lg:mb-[3.75rem]">Cursus Integer
+                    <h1 className=" lg:w-[52rem] text-[2rem] lg:text-[80px] whitespace-nowrap font-bold font-['Segoe UI'] lg:leading-[90px] mb-[2rem] lg:mb-[3.75rem]">Cursus Integer
                         <br/>
                         <div className={"flex flex-row "}>
                             <div>Consequat</div>
                             <div className={'typewriter'}>Tristique.</div>
                         </div>
                     </h1>
-                    <div  className={"w-2/3 mb-[3.75rem]"}>
+                    <div  className={"w-3/4 mb-[3.75rem]"}>
                         <div className={"flex flex-row flex-wrap gap-[.87rem] "}>
                             {badgeList.map((item:string) =>
                             { return(
