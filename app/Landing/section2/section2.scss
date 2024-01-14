@@ -17,7 +17,7 @@
     @apply lg:flex lg:flex-col  lg:w-1/2 mt-3 lg:mt-[20rem] lg:ml-[15.5rem];
   }
   &__form-message {
-    @apply font-bold p-32 text-3xl rounded-xl bg-white text-center;
+    @apply p-20 font-bold lg:p-32 text-3xl rounded-xl bg-white text-center;
   }
   &__input {
     @apply p-4 rounded-2xl max-w-md ;
