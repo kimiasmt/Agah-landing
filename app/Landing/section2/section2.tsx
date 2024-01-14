@@ -44,31 +44,37 @@ export default function Section2 () {
                     <Image src={section2} alt={"section2-image"}/>
                 </div>
                 <div className={"section2__form-container"}>
-                    {!formCompleted && <form className={"flex flex-col"} onSubmit={handleSubmit(onSubmit)}>
+                    {!formCompleted &&
+                        <form className={"flex flex-col"} onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor={"name"}  className={"text-lg font-bold"}  >Name</label>
                         <div className={"section2__input-container"}>
                             <input id={"name"} className={"section2__input"} {...register("name",{ required: true })} />
                             {errors.name && <span>This field is required</span>}
                         </div>
 
-                        <label htmlFor={"phoneNumber"}    className={"text-lg font-bold"} >phoneNumber</label>
+                        <label htmlFor={"phoneNumber"}
+                               className={"text-lg font-bold"}>
+                            phoneNumber
+                        </label>
                         <div className={"section2__input-container"}>
-                            <input className={"section2__input"} {...register("phoneNumber", { required: true ,pattern: {
+                            <input className={"section2__input"}
+                                   {...register("phoneNumber", { required: true ,pattern: {
                                     value: /^09\d{9}$/,
                                     message: 'not correct',
                                 }})} />
-                            {errors.phoneNumber && <span>This field is required</span>}
+                            {errors.phoneNumber &&
+                                <span>This field is required</span>}
                         </div>
                         <input
                             className="section2__submit "
                             type={"submit"}/>
-
                     </form>}
-                    {formCompleted && <div className={"font-bold p-32 text-3xl rounded-xl bg-white text-center "}>
+                    {formCompleted &&
+                        <div className={"section2__form-message"}>
                             Thanks for Joining us
-                    </div>}
+                        </div>}
                 </div>
-                <div className={"hidden lg:block lg:w-[44.6rem] lg:mr-[10rem] lg:mt-[10rem]"}>
+                <div className={"section2__image--web"}>
                     <Image src={section2} alt={"section2-image"}/>
                 </div>
         </div>

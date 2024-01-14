@@ -1,9 +1,44 @@
+.section1 {
+  @apply px-[1.25rem] lg:items-center  lg:flex lg:flex-row justify-end;
+
+  &__image {
+    @apply w-[21.87rem] lg:hidden;
+  }
+  &__image-web {
+    @apply hidden lg:block lg:w-[44.6rem] lg:mr-[10rem];
+  }
+
+  &__container {
+    @apply lg:flex lg:flex-col lg:w-1/2 mt-3 lg:mt-[7.19rem] lg:ml-[15.5rem];
+  }
+
+  &__subtitle{
+    @apply text-primary text-[1rem] lg:text-3xl font-bold uppercase;
+  }
+
+  &__title {
+    @apply  lg:w-[52rem] text-[1.8rem] lg:text-[80px] whitespace-nowrap font-bold lg:leading-[90px] mb-[2rem] lg:mb-[3.75rem];
+  }
+  &__badge-list {
+    @apply  w-3/4 mb-[3.75rem];
+  }
+  &__badge-container {
+    @apply flex flex-row flex-wrap gap-[.87rem];
+  }
+  &__button-container {
+    @apply w-full lg:w-80 lg:h-20 h-[3.7rem] px-10 pt-4 pb-5 lg:px-12 lg:pt-5 lg:pb-6 bg-primary rounded-full justify-between items-center inline-flex;
+  }
+  &__button {
+    @apply w-full lg:text-2xl font-bold ;
+  }
+}
+
 .typewriter {
   @apply overflow-hidden border-r-8 border-r-black whitespace-nowrap pl-4;
   animation:
           //pause 2s infinite,
           typing 8s steps(100, end) infinite ,
-          blink-caret .75s step-end infinite;
+          blink-caret .3s step-end infinite;
 }
 
 /* The typing effect */

@@ -10,8 +10,14 @@
   &__image {
     @apply w-[21.87rem] pt-8 flex flex-row items-center lg:mt-[10rem] lg:hidden;
   }
+  &__image--web {
+    @apply hidden lg:block lg:w-[44.6rem] lg:mr-[10rem] lg:mt-[10rem];
+  }
   &__form-container {
     @apply lg:flex lg:flex-col  lg:w-1/2 mt-3 lg:mt-[20rem] lg:ml-[15.5rem];
+  }
+  &__form-message {
+    @apply font-bold p-32 text-3xl rounded-xl bg-white text-center;
   }
   &__input {
     @apply p-4 rounded-2xl max-w-md ;
